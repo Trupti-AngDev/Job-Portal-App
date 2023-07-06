@@ -16,6 +16,8 @@ import{MatInputModule} from '@angular/material/input';
 import{MatRadioModule} from '@angular/material/radio';
 import{MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
+import { SettingComponent } from './setting/setting.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     UserAuthComponent,
     HomepageComponent,
     JobPostComponent,
+    SettingComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

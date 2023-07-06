@@ -1,35 +1,62 @@
 
-<div class="container" routerLink="/">
-	<div class="screen">
-		<div class="screen__content">
-			<form class="login">
-				<div class="login__field">
-					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="User name / Email">
-				</div>
-				<div class="login__field">
-					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Password">
-				</div>
-				<button class="button login__submit">
-					<span class="button__text">Log In Now</span>
-					<i class="button__icon fas fa-chevron-right"></i>
-				</button>				
-			</form>
-			<div class="social-login">
-				<h3>log in via</h3>
-				<div class="social-icons">
-					<a href="#" class="social-login__icon fab fa-instagram"></a>
-					<a href="#" class="social-login__icon fab fa-facebook"></a>
-					<a href="#" class="social-login__icon fab fa-twitter"></a>
-				</div>
-			</div>
+<div class="login-wrap">
+	<div class="login-html">
+	  <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+	  <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+	  <div class="login-form">
+		<div class="sign-in-htm">
+			<form>
+		  <div class="group">
+			<label for="user" class="label" style="color: black;">Username</label>
+			<input id="user" type="text" class="input">
+		  </div>
+		  <div class="group">
+			<label for="pass" class="label" style="color: black;">Password</label>
+			<input id="pass" type="password" class="input" data-type="password">
+		  </div>
+		  <div class="group">
+			<input id="check" type="checkbox" class="check" checked>
+			<label for="check" style="color: black;"><span class="icon"></span> Keep me Signed in</label>
+		  </div>
+		  <div class="group">
+			<input type="submit" class="button" value="Sign In">
+		  </div>
+		  <div class="hr"></div>
+		  <div class="foot-lnk">
+			<a routerLink="/forget">Forgot Password?</a>
+		  </div>
+		</form>
 		</div>
-		<div class="screen__background">
-			<span class="screen__background__shape screen__background__shape4"></span>
-			<span class="screen__background__shape screen__background__shape3"></span>		
-			<span class="screen__background__shape screen__background__shape2"></span>
-			<span class="screen__background__shape screen__background__shape1"></span>
-		</div>		
+		<div class="sign-up-htm">
+			<form>
+		  <div class="group">
+			<label for="user" class="label" style="color: black;">Username</label>
+			<input id="user" type="text" class="input">
+		  </div>
+		  <div class="group">
+			<label for="phone" class="label" style="color: black;">Phone</label>
+			<input id="pass" type="password" class="input" data-type="password">
+		  </div>
+		  <div class="group">
+			<label for="pass" class="label"style="color: black">Email Address</label>
+			<input id="pass" type="text" class="input">
+		  </div>
+		  <div class="group">
+			<label for="pass" class="label" style="color: black;">Password</label>
+			<input id="pass" type="password" class="input" data-type="password">
+		  </div>
+		  <div class="group">
+			<label for="pass" class="label" style="color: black;">Repeat Password</label>
+			<input id="pass" type="password" class="input" data-type="password">
+		  </div>
+		
+		  <div class="group">
+			<input type="submit" class="button" value="Sign Up">
+		  </div>
+		  <div class="hr"></div>
+		 
+		</form>
+		</div>
+	  </div>
 	</div>
-</div>
+  </div>

@@ -1,0 +1,34 @@
+body{
+	background: #4527A0;
+}
+h1{
+    text-align: center;
+    margin-top: 10px;
+}
+.list-group{
+	width: 400px !important;
+}
+
+.list-group-item{
+	margin-top:10px;
+	border-radius: none; 
+	background: #5E35B1;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+
+.list-group-item:hover{
+	transform: scaleX(1.1);
+}
+
+
+.list-group-item:hover .check {
+	opacity: 1;
+
+}
+
+
+
+
