@@ -1,0 +1,46 @@
+<div class="body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1">
+        <button id="menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample" routerLink="/homepage">
+          <i class="bi bi-list" style="color: white; font-weight: bold;"></i> 
+        </button>
+      </div>
+     
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel" style="width: fit-content;">
+          <div class="offcanvas-body">
+            <div class="dropdown mt-3" id="menu-list">
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                style="float: right;"></button>
+              <ul>
+                <li><button class="btn btn-outline-primary">View Your Posts</button></li>
+                <li><button class="btn btn-outline-primary">View Requests</button></li>
+                <li><button class="btn btn-outline-primary">Buy Plans</button></li>
+                <li><button class="btn btn-outline-primary">My account</button></li>
+                <li><button class="btn btn-outline-primary">Settings</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+    <div class="col-md-12">
+    <h1>Welcome</h1>
+    </div>
+   <div class="row">
+    <div class="col-md-12">
+    <div class="content">
+      <h2 class="text">
+        Not Posted Yet!<br>
+        Tap on add posts button to post new opening
+      </h2>
+      <br>
+      <button class="btn btn-lg btn-success" (click)="moveToJobPost()">ADD POSTS</button>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,205 @@
+<div class="container" routerLink="post-job" id="basicInfoForm">
+    <form [formGroup]="postForm" (ngSubmit)="onFormSubmit($event)">
+        <h2 style="text-align: center"><b>Post Your Openings</b></h2>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Your Organization Name</mat-label>
+                <input matInput placeholder="Company Name" formControlName="companyname" name="companyname" />
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <mat-hint align="end"><span style="color: red"
+                        *ngIf="Name && Name.invalid && Name.touched">required</span>
+                </mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Opening For Position</mat-label>
+                <input matInput placeholder="Designation" formControlName="position" name="position" />
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <mat-hint align="end"><span style="color: red"
+                        *ngIf="Position && Position.invalid && Position.touched">required</span></mat-hint>
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Number of vacancies</mat-label>
+                <input type="number" matInput placeholder="Designation" formControlName="vacancies" name="vacancies" />
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <mat-hint align="end"></mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="row" id="job">
+            <div>
+                <label style="font-size: 18px">Job Type:</label>
+                <mat-radio-group formControlName="jobtype" name="jobtype">
+                    <mat-radio-button value="full">Full Time</mat-radio-button>
+                    <mat-radio-button value="part">Part Time</mat-radio-button>
+                    <mat-radio-button value="field">Field Work</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Job Description</mat-label>
+                <textarea matInput #input maxlength="100" rows="5" cols="60" placeholder="Type Here" formControlName="jd" name="jd"></textarea>
+                <mat-hint align="end">{{ input.value.length }}/100</mat-hint>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <fieldset class="scheduler-border">
+                <legend class="scheduler-border">Contact Details</legend>
+                <br>
+                <div class="row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput placeholder="pat@example.com" formControlName="email" name="email">
+                        <mat-hint align="end"><span style="color: red"
+                                *ngIf="Email && Email.invalid && Email.touched">You must enter valid email</span>
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput placeholder="+91-1234567890" formControlName="phone" name="phone">
+                        <mat-hint align="end"><span style="color: red"
+                                *ngIf="Phone && Phone.invalid && Phone.touched">Must Enter valid contact number</span>
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+
+            </fieldset>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-lg btn-success button-post" (click)="moveToCandidateForm()" id="next">Next</button>
+            </div>
+        </div>
+    </form>
+</div>
+<!--Candidate Requirement form-->
+<div class="container" routerLink="candidate-requirement" id="candidateForm">
+    <form [formGroup]="postForm" >
+        <h2 style="text-align: center;"><b>Candidate Requirements</b></h2>
+
+        <div class="row" id="job">
+
+            <label style="font-size: 18px">Education:</label>
+            <mat-radio-group class="row" formControlName="education" name="education">
+                <div class="col">
+                    <mat-radio-button value="10th">10th</mat-radio-button>
+                </div>
+                <div class="col">
+                    <mat-radio-button value="12th">12th</mat-radio-button>
+                </div>
+                <div class="col">
+                    <mat-radio-button value="Diploma">Diploma</mat-radio-button>
+                </div>
+                <div class="col">
+                    <mat-radio-button value="ITI">ITI</mat-radio-button>
+                </div>
+                <div class="col">
+
+                    <mat-radio-button value="Graduate">Graduate</mat-radio-button>
+                </div>
+                <div class="col">
+                    <mat-radio-button value="Post-Graduate">Post-Graduate</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Select Qualification</mat-label>
+                <mat-select formControlName="qualification" name="qualification">
+                    <mat-option value="one">BE</mat-option>
+                    <mat-option value="two">BSC</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="row" id="job">
+
+            <label style="font-size: 18px" name="lang">English Level:</label>
+            <mat-radio-group formControlName="englishLevel" name="englishLevel" >
+                <div class="col">
+                    <mat-radio-button value="No" name="lang">No</mat-radio-button>
+                </div>
+                <div class="col">
+                    <mat-radio-button value="Basic" name="lang">Basic</mat-radio-button>
+                </div>
+                <div class="col">
+                    <mat-radio-button value="Advanced">Advanced</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+        <div class="row">
+            <div class="justify-content-center" style="text-align: center;">
+                <button class="btn btn-lg btn-secondary" style="width: fit-content;" (click)="back()">Back</button> &nbsp; &nbsp;
+                <button class="btn btn-lg btn-success"
+                    style="width: fit-content;" (click)="moveToLocalityForm()" id="next">Next</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+<!--Locality Form-->
+<div class="container" routerLink="post-job" id="locationForm">
+    <form [formGroup]="postForm" (ngSubmit)="post()">
+        <h2 style="text-align: center"><b>Locality Details</b></h2>
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border">Job Opening Location</legend>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>Country</mat-label>
+                    <mat-select (selectionChange)="onSelectCountry($event.value)" formControlName="country" name="country">
+                        <mat-option *ngFor="let country of CountriesList" [value]="country.short_name">
+                            {{country.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>State</mat-label>
+                    <mat-select (selectionChange)="onSelectState($event.value)" formControlName="state" name=state>
+                        <mat-option *ngFor="let state of StatesList" [value]="state.state_short_name">
+                            {{state.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field>
+                    <mat-label>City</mat-label>
+                    <mat-select formControlName="city" name="city">     
+                        <mat-option *ngFor="let city of CitiesList" [value]="city">
+                      {{city.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter Pincode</mat-label>
+                    <input matInput placeholder="e.g:411001" formControlName="pincode" name="pincode" />
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                    <mat-hint align="end"><span style="color: red"
+                            *ngIf="Pincode && Pincode.invalid && Pincode.touched">Must enter a valid pincode</span>
+                    </mat-hint>
+                </mat-form-field>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn btn-lg btn-success"
+                    style="width: fit-content; margin-left: 42%;">Post</button>
+            </div>
+        </fieldset>
+
+    </form>
+</div>
+<table>
+    <tr>
+        <td></td>
+    </tr>
+</table>
