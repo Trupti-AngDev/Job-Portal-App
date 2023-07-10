@@ -6,6 +6,7 @@ import { JobPostComponent } from './job-post/job-post.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SettingComponent } from './setting/setting.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { PortalSelectionComponent } from './portal-selection/portal-selection.component';
 
 
 const routes: Routes = [
@@ -33,7 +34,10 @@ const routes: Routes = [
     path:'forget',
     component:ForgetPasswordComponent
   },
-  
+  {
+    path:'portalselection',
+    component:PortalSelectionComponent
+  }
 ];
 
 @NgModule({

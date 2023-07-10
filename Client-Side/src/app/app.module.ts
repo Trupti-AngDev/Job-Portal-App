@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SettingComponent } from './setting/setting.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { PortalSelectionComponent } from './portal-selection/portal-selection.component';
+import{MatButtonModule} from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     SettingComponent,
     ProfileComponent,
     ForgetPasswordComponent,
+    PortalSelectionComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,7 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     MatRadioModule,
     MatSelectModule,
     HttpClientModule,
-
+    MatButtonModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
