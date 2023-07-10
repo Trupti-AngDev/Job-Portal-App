@@ -18,6 +18,7 @@ import{MatSelectModule} from '@angular/material/select';
 import { HttpClientModule } from '@angular/common/http';
 import { SettingComponent } from './setting/setting.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProfileComponent } from './profile/profile.component';
     JobPostComponent,
     SettingComponent,
     ProfileComponent,
+    ForgetPasswordComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,13 @@
 body{
 	background: #4527A0;
 }
+.list-group{
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
 h1{
     text-align: center;
     margin-top: 10px;
+	font-size: 40px;
 }
 .list-group{
 	width: 400px !important;
@@ -12,21 +16,21 @@ h1{
 .list-group-item{
 	margin-top:10px;
 	border-radius: none; 
-	background: #5E35B1;
+	background: lightgrey;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
-    color: white;
+    color: black;
+	
 }
-
-
+.controls{
+	font-size: 20px;
+}
 .list-group-item:hover{
 	transform: scaleX(1.1);
 }
 
-
 .list-group-item:hover .check {
 	opacity: 1;
-
 }
 
 
