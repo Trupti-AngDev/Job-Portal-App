@@ -29,6 +29,7 @@ export class JobPostComponent {
     jd: new FormControl(),
     email: new FormControl('', [Validators.required, Validators.email]),
     phone: new FormControl('',[  Validators.pattern(/^(?:\d{10}|\d{2}-\d{8}|\d{3}-\d{7})$/), Validators.required, ]),
+    website: new FormControl(),
     education: new FormControl(),
     qualification: new FormControl(),
     englishLevel: new FormControl(),
@@ -95,6 +96,9 @@ export class JobPostComponent {
 
   get Phone(){
     return this.postForm.get('phone')
+  }
+  get Website(){
+    return this.postForm.get('website')
   }
   get Education(){
     return this.postForm.get('education')
