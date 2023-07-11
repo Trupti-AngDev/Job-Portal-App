@@ -8,10 +8,10 @@ import { Observable } from 'rxjs';
 export class AuthServiceService {
   constructor(private http:HttpClient) { }
   login(data:any):Observable<any>{
-    return this.http.post('http://localhost:9002/auth/login',data)
+    return this.http.post('http://localhost:3000/user/sign-in',data)
   }
   signup(data:any):Observable<any>{
-    return this.http.post('http://localhost:9002/auth/signup',data)
+    return this.http.post('http://localhost:3000/user/register',data)
   }
   forget(data:any):Observable<any>{
     return this.http.post('http://localhost:9002/auth/forget',data)
