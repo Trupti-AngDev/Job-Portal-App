@@ -13,5 +13,6 @@ export default {
     `/user/google/callback`,
     `/user/test-google-protected`,
     `/user/logout`,
+    `/user/test/email`,
   ],
 };

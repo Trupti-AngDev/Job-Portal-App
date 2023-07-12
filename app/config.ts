@@ -10,8 +10,8 @@ export = {
     timezone: "utc",
   },
   JwtToken: {
-    secretKey: process.env.JWT_TOKEN_SECRET_KEY || "test",
-    expiry: process.env.JWT_TOKEN_EXPIRY || "1d",
+    secretKey: env.JWT_TOKEN_SECRET_KEY || "test",
+    expiry: env.JWT_TOKEN_EXPIRY || "1d",
   },
 
   listPerPage: env.LIST_PER_PAGE || 10,

@@ -4,7 +4,6 @@ import express from "express";
 import { celebrate } from "celebrate";
 import UserSchema from "../../Constants/Schema/User.schema";
 import passport from "passport";
-
 const router = express.Router();
 router.post(
   "/sign-in",
@@ -29,7 +28,8 @@ router.get(
   userController.registerGoogleUser
 );
 
-// routes for testing purpose : -
+/*
+ routes for testing purpose : -
 
 router.get("/logout", (req, res) => {
   req.logout((err: any) => {
@@ -43,5 +43,7 @@ router.get("/logout", (req, res) => {
 router.get("/test-google-protected", (req, res) => {
   res.send({ valid: req.isAuthenticated() });
 });
+
+*/
 
 export default router;
