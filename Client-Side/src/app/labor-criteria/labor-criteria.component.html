@@ -1,18 +1,20 @@
-<div class="container justify-content-center" routerLink="laborcriteria">
+<div class="container justify-content-center card shadow-lg p-5 mt-5 mb-5" routerLink="laborcriteria">
     <div class="row">
         <h1>What are you looking for?</h1>
     </div>
     <div class="row">
         <label>
-            <input type="radio" class="option-input radio" name="labor" id="skillLabor">Skilled Labor
+            <input type="radio" class="option-input radio" name="labor" id="skillLabor" [(ngModel)]="selectedCriteria" value="Skilled Labor">Skilled Labor
         </label>
         <label>
-            <input type="radio" class="option-input radio" name="labor" id="profLabor">Professional Labor
+            <input type="radio" class="option-input radio" name="labor" id="profLabor" [(ngModel)]="selectedCriteria" value="Professional Labor">Professional Labor
         </label>
     </div>
     <div class="row justify-content-center" style="justify-content: space-around;">
         <button class="btn btn-lg btn-outline-success" (click)="movetohomepage()">Back</button>
-        <button class="btn btn-lg btn-outline-success">Next</button>
+        <button class="btn btn-lg btn-outline-success"(click)="movetodomain()">Next</button>
     </div>
 </div>
+
+
 

@@ -50,11 +50,11 @@ const routes: Routes = [
   {
 
 
-    path:'skilledLabour',
+    path:'skilledLabor',
     component:SkilledLabourDomainComponent
   },
   {
-    path:'professional-labour',
+    path:'professional-labor',
     component:ProfessionalLabourDomainComponent
 
   },

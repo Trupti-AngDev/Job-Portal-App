@@ -3,11 +3,14 @@
     margin-left: 10%;
     background: lightgray;
 }
-button{
+.dropdown-toggle{
     margin-top: 10px;
     width: 100%;
     text-align: left;
     border: 1px solid gray;
+    margin-left: 0;
+
+    
 }
 
 .dropdown-toggle::after {
@@ -25,4 +28,26 @@ button{
 }
 .dropdown-menu{
 width: 100%;
+}
+      /* #buttons{
+    width: fit-content;
+    margin-top: 10%;
+    align-items: center;
+    margin-left: 20px;
+    background-color: white;
+    color: black;
+    display: inline-block;
+}  */
+
+button{
+    width: fit-content;
+    margin-top: 10%;
+    align-items: center;
+    margin-left: 20px;
+    background-color: white;
+    color: black;
+}
+#buttons{
+    text-align: center;
+    justify-content: space-between;
 }
