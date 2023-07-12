@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SettingComponent } from './setting/setting.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { PortalSelectionComponent } from './portal-selection/portal-selection.component';
+import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path:'portalselection',
     component:PortalSelectionComponent
+  },
+  {
+    path:'laborcriteria',
+    component:LaborCriteriaComponent
   }
 ];
 
