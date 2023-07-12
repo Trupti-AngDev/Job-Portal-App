@@ -1,0 +1,28 @@
+.card{
+    width:70%;
+    margin-left: 10%;
+    background: lightgray;
+}
+button{
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid gray;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .3em;
+    vertical-align: middle;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+    float: right;
+    margin-top: 8px;
+}
+.dropdown-menu{
+width: 100%;
+}

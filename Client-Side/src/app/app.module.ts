@@ -20,8 +20,7 @@ import { SettingComponent } from './setting/setting.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { PortalSelectionComponent } from './portal-selection/portal-selection.component';
-import{MatButtonModule} from '@angular/material/button';
-import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.component'
+import{MatButtonModule} from '@angular/material/button'
 
 @NgModule({
   declarations: [
@@ -33,7 +32,6 @@ import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.componen
     ProfileComponent,
     ForgetPasswordComponent,
     PortalSelectionComponent,
-    LaborCriteriaComponent,
   ],
   imports: [
     BrowserModule,

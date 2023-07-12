@@ -36,19 +36,7 @@ signupForm=new FormGroup({
   this.auth.signup(data).subscribe((response)=>{
     console.log(response)
   })
-  // if (this.signupForm.valid) {
-  //   const formData = this.signupForm.value;
-  //   this.http.post<any>('http://localhost:3000/user/register', formData).subscribe(
-  //     (response) => {
-  //       console.log('Data pushed successfully:', response);
-  //       // Perform any additional actions after successful data push
-  //     },
-  //     (error) => {
-  //       console.error('Error pushing data:', error);
-  //       // Handle error response
-  //     }
-  //   );
-  // }
+  
       }
      
     get fName(){
@@ -73,10 +61,19 @@ signupForm=new FormGroup({
   logindata(data:any){ 
     // console.log(this.loginForm.value)
 
-    this.auth.login(data).subscribe((response)=>{
-      console.log("login Successfull",data)
-      localStorage.setItem("Token",response.results.token)
-      this.router.navigate(["/portalselection"])
-    })
+if (this.loginForm.valid) {
+  this.auth.login(data).subscribe({
+    next: (response) => {
+      console.log("Login Successful", data);
+      localStorage.setItem("Token", response.results.token);
+      this.router.navigate(["/portalselection"]);
+      this.loginForm.reset();
+    },
+    error: (error) => {
+      alert("Error in Login");
+      // Handle error, display error message to the user, etc.
+    },
+  });
+}
 }
 }
