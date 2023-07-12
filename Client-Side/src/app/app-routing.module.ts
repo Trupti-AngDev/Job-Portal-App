@@ -7,6 +7,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { SettingComponent } from './setting/setting.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { PortalSelectionComponent } from './portal-selection/portal-selection.component';
+import { SkilledLabourDomainComponent } from './Domain/skilled-labour-domain/skilled-labour-domain.component';
+import { ProfessionalLabourDomainComponent } from './Domain/professional-labour-domain/professional-labour-domain.component';
 
 
 const routes: Routes = [
@@ -37,6 +39,14 @@ const routes: Routes = [
   {
     path:'portalselection',
     component:PortalSelectionComponent
+  },
+  {
+    path:'skilledLabour',
+    component:SkilledLabourDomainComponent
+  },
+  {
+    path:'professional-labour',
+    component:ProfessionalLabourDomainComponent
   }
 ];
 

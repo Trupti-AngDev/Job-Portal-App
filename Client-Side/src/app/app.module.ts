@@ -20,7 +20,9 @@ import { SettingComponent } from './setting/setting.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { PortalSelectionComponent } from './portal-selection/portal-selection.component';
-import{MatButtonModule} from '@angular/material/button'
+import{MatButtonModule} from '@angular/material/button';
+import { ProfessionalLabourDomainComponent } from './Domain/professional-labour-domain/professional-labour-domain.component';
+import { SkilledLabourDomainComponent } from './Domain/skilled-labour-domain/skilled-labour-domain.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import{MatButtonModule} from '@angular/material/button'
     ProfileComponent,
     ForgetPasswordComponent,
     PortalSelectionComponent,
+    ProfessionalLabourDomainComponent,
+    SkilledLabourDomainComponent,
   ],
   imports: [
     BrowserModule,
