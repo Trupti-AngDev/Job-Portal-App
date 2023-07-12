@@ -12,6 +12,6 @@ export class HomepageComponent {
   constructor( private router:Router){}
 
   moveToJobPost(){
-  this.router.navigate(['/post-job'])
+  this.router.navigate(['/laborcriteria'])
   }
 }

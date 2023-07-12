@@ -1,0 +1,109 @@
+.container{
+    background-color: lightgray;
+    margin: auto;
+    padding: 20px;
+    padding-right: 10px;
+    width: max-content;
+    height: auto;
+    box-shadow: 0 10px 20px 20px rgba(0, 0, 0, 0);
+    margin-top: 10%;
+    margin-bottom: 20px;
+     padding-right: 40px;
+     text-align: center;
+}
+h1{
+    text-align: center;
+    font-size: x-large;
+    margin-top: 40px;
+}
+
+label{
+    line-height: 40px;
+    font-size: x-large;
+}
+.option-input:checked::after{
+animation: click-wave 0.75s;
+background: #40e0d0;
+content: '';
+display: block;
+position: relative;
+z-index: 100;
+}
+.option-input.radio{
+    border-radius: 30%;
+}
+
+@keyframes click-wave {
+    0%{
+        height: 40px;
+        width: 40px;
+        opacity: 0.35;
+        position: relative;
+        border-radius: 20%;
+    }
+    100%{
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+} 
+.option-input{
+    appearance: none;
+   -ms-progress-appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: white;
+
+    border: 1px solid gray;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+.option-input:hover{
+    background-color: lightgreen;
+}
+
+.option-input:checked::before{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    content: '✓';
+    display: inline-block;
+    font-size: 25.5559px;
+    text-align: center;
+    line-height: 40px;
+}
+/* #profLabor{
+    margin-left: -50px;
+    margin-top: 30px;
+} */
+#skillLabor{
+    margin-top: 5%;
+    margin-left: -65px;
+} 
+button{
+    width: fit-content;
+    margin-top: 10%;
+    align-items: center;
+    margin-left: 20px;
+    background-color: white;
+    color: black;
+}
+#buttons{
+    text-align: center;
+    justify-content: space-between;
+}
