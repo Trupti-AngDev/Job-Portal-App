@@ -76,4 +76,15 @@ if (this.loginForm.valid) {
   });
 }
 }
+google(){
+  this.auth.Google().subscribe({
+    next:(response)=>{
+      console.log(response)
+    },
+    error: (error) => {
+      console.log(error);
+      // Handle error, display error message to the user, etc.
+    },
+  })
+}
 }
