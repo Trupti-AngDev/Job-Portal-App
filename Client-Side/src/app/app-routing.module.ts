@@ -7,14 +7,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { SettingComponent } from './setting/setting.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { PortalSelectionComponent } from './portal-selection/portal-selection.component';
-
-
-import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.component';
-
-import { SkilledLabourDomainComponent } from './Domain/skilled-labour-domain/skilled-labour-domain.component';
-import { ProfessionalLabourDomainComponent } from './Domain/professional-labour-domain/professional-labour-domain.component';
-
-
 import { SkilledLabourDomainComponent } from './Domain/skilled-labour-domain/skilled-labour-domain.component';
 import { ProfessionalLabourDomainComponent } from './Domain/professional-labour-domain/professional-labour-domain.component';
 import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.component';
