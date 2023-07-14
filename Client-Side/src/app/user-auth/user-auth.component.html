@@ -41,7 +41,7 @@
 				<form [formGroup]="signupForm" (ngSubmit)="signupdata(signupForm.value)">
 					<div class="group">
 						<label for="name" class="label" style="color: black;">First Name</label>
-						<input id="text" type="text" class="input" data-type="text" formControlName="fName">
+						<input id="text" type="text" class="input" data-type="text" formControlName="first_name">
 						<span style="color: red;" *ngIf="fName && fName.invalid && fName.touched ">This Field is
 							required</span>
 					</div>

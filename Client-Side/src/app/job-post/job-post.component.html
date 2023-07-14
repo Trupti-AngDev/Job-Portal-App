@@ -154,7 +154,7 @@
 </div>
 <!--Locality Form-->
 <div class="container" routerLink="post-job" id="locationForm">
-    <form [formGroup]="postForm" (ngSubmit)="post()">
+    <form [formGroup]="postForm" (ngSubmit)="post(postForm.value)">
         <h2 style="text-align: center"><b>Locality Details</b></h2>
         <fieldset class="scheduler-border">
             <legend class="scheduler-border">Job Opening Location</legend>

@@ -28,7 +28,8 @@ import{MatButtonModule} from '@angular/material/button'
 import { ProfessionalLabourDomainComponent } from './Domain/professional-labour-domain/professional-labour-domain.component';
 import { SkilledLabourDomainComponent } from './Domain/skilled-labour-domain/skilled-labour-domain.component';
 
-import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.component'
+import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.component';
+import { DashboardComponent } from './dashboard/dashboard.component'
 
 
 
@@ -47,6 +48,7 @@ import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.componen
     ProfessionalLabourDomainComponent,
     SkilledLabourDomainComponent,
     LaborCriteriaComponent,
+    DashboardComponent,
 
   ],
   imports: [

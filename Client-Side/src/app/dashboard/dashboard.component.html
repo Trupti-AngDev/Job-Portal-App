@@ -1,0 +1,26 @@
+<div class="d-flex">
+    <div class="card" style="width: 18rem; text-align: center;">
+        <a routerLink=""><div class="card-body ">
+          <i class="fa-sharp fa-solid fa-car-battery fa-2xl"></i>
+            <h1 style="border: 1px solid black; background-color: lightblue;" class="card-text">View Your Posts</h1>
+          <!-- <ul *ngFor="let post of jobPosts">
+            <li> <b>{{post.companyname}}</b>---{{post.position}} </li>
+          </ul> -->
+<!-- 
+          <table class="table">
+            <th>Organization Name</th>
+            <th>Opening Position</th>
+<tr *ngFor="let post of jobPosts">
+    <td (click)="postDetails()"><b>{{post.companyname}}</b></td>
+    <td>{{post.position}} </td>
+</tr>
+          </table> -->
+
+          <div *ngFor="let post of jobPosts">
+           <h2 class="list">{{post.companyname}} -- {{post.position}}</h2>
+          </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    

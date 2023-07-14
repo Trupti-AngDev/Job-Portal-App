@@ -10,6 +10,7 @@ import { PortalSelectionComponent } from './portal-selection/portal-selection.co
 import { SkilledLabourDomainComponent } from './Domain/skilled-labour-domain/skilled-labour-domain.component';
 import { ProfessionalLabourDomainComponent } from './Domain/professional-labour-domain/professional-labour-domain.component';
 import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -62,6 +63,10 @@ const routes: Routes = [
     path:'laborcriteria',
     component:LaborCriteriaComponent
 
+  },
+  {
+    path:'dashboard',
+    component:DashboardComponent
   }
 ];
 

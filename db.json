@@ -1,0 +1,72 @@
+{
+  "job-posts": [
+    {
+      "companyname": "optical arc",
+      "position": "Angular",
+      "jobtype": "full",
+      "jd": "Frontend Developer",
+      "email": "oparc@gmail.com",
+      "phone": "3122432342",
+      "website": "www.oparc.com",
+      "education": "Graduate",
+      "qualification": "two",
+      "englishLevel": "Advanced",
+      "country": null,
+      "state": null,
+      "city": null,
+      "pincode": "411001",
+      "id": 1
+    },
+    {
+      "companyname": "optical arc1",
+      "position": "Angular",
+      "jobtype": null,
+      "jd": "Backend Developer",
+      "email": "oparc1@gmail.com",
+      "phone": "2324444444",
+      "website": "www.oparc.com",
+      "education": null,
+      "qualification": null,
+      "englishLevel": null,
+      "country": null,
+      "state": null,
+      "city": null,
+      "pincode": "411001",
+      "id": 2
+    },
+    {
+      "companyname": "optical arc2",
+      "position": "Angular",
+      "jobtype": null,
+      "jd": null,
+      "email": "tru@gmail.com",
+      "phone": "2324444444",
+      "website": "www.oparc.com",
+      "education": null,
+      "qualification": null,
+      "englishLevel": null,
+      "country": null,
+      "state": null,
+      "city": null,
+      "pincode": "411001",
+      "id": 3
+    },
+    {
+      "companyname": "appsplanet",
+      "position": "React Dev",
+      "jobtype": "full",
+      "jd": null,
+      "email": "tru@gmail.com",
+      "phone": "2132423423",
+      "website": "www.oparc.com",
+      "education": null,
+      "qualification": null,
+      "englishLevel": null,
+      "country": null,
+      "state": null,
+      "city": null,
+      "pincode": "411001",
+      "id": 4
+    }
+  ]
+}

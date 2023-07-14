@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { FormBuilder, FormControl, FormControlName, AbstractControl } from "@angular/forms";
 import { FormGroup } from "@angular/forms";
@@ -7,6 +7,8 @@ import { animate } from "@angular/animations";
 import { Observable, retry, startWith } from "rxjs";
 import { DropdownDataService } from "../services/dropdown-data.service";
 import { response } from "express";
+import { JobPostService } from "../services/job-post.service";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: "app-job-post",
@@ -15,12 +17,12 @@ import { response } from "express";
 })
 export class JobPostComponent {
 
-  constructor(private router: Router, private dropdownData:DropdownDataService) {}
+  constructor(private router: Router, private dropdownData:DropdownDataService, private jobpost:JobPostService) {}
 
    CountriesList :any= [];
    StatesList: any =[];
    CitiesList: any=[];
-  
+ 
 
   postForm = new FormGroup({
     companyname: new FormControl("", [Validators.required]),
@@ -165,8 +167,13 @@ export class JobPostComponent {
 
       
 
-     post(){
-     console.log(this.postForm.value);
-     this.postForm.reset();
+     post(data:any){
+       //console.log(data);
+       this.jobpost.getPostData(data).subscribe((response)=>{
+       console.log(response);
+      
+       })
+ 
+    
      }
 }
