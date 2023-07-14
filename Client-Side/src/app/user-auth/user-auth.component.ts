@@ -23,7 +23,7 @@ signupForm=new FormGroup({
        email:new FormControl('',[Validators.required,Validators.email]),
        password:new FormControl('',[ Validators.required,Validators.pattern(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&^_-]).{8,}/)]),
        cpassword:new FormControl('',[Validators.required,Validators.pattern(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&^_-]).{8,}/)]),
-       
+       role:new FormControl('',[Validators.required])
 })
 
      constructor(private fb:FormBuilder,private auth:AuthServiceService,private http: HttpClient,private router:Router) { 
@@ -57,6 +57,10 @@ signupForm=new FormGroup({
             get number(){
               return this.signupForm.get('number');
               }
+            get role(){
+              return this.signupForm.get('number');
+              }
+            
           
   logindata(data:any){ 
     // console.log(this.loginForm.value)
@@ -76,15 +80,30 @@ if (this.loginForm.valid) {
   });
 }
 }
-google(){
-  this.auth.Google().subscribe({
-    next:(response)=>{
-      console.log(response)
-    },
-    error: (error) => {
-      console.log(error);
-      // Handle error, display error message to the user, etc.
-    },
-  })
+// google(){
+//   this.auth.Google().subscribe({
+//     next:(response)=>{
+//       console.log(response)
+//     },
+//     error: (error) => {
+//       console.log(error);
+//       // Handle error, display error message to the user, etc.
+//     },
+//   })
+// }
+google() {
+const popup = 
+  window.open(
+    "http://localhost:3000/user/google",
+    
+    "width=800,height=600,top=100,left=100,resizable=1,scrollbars=1",
+    '_self'
+  );
+  let listener = window.addEventListener("message", (message) => {
+    console.log("Response from backend", message.data.user);
+    localStorage.setItem("Token", message.data.user.token);
+    this.router.navigate(["/portalselection"]);
+    this.loginForm.reset();
+  });
 }
 }

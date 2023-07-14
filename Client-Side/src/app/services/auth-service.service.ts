@@ -16,7 +16,7 @@ export class AuthServiceService {
   forget(data:any):Observable<any>{
     return this.http.post('http://localhost:9002/auth/forget',data)
   }
-  Google():Observable<any>{
-    return this.http.get('http://localhost:3000/user/google')
-  }
-}
+//   Google():Observable<any>{
+//     return this.http.get('http://localhost:3000/user/auth-google')
+//   }
+ }
