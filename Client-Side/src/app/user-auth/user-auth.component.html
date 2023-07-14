@@ -41,21 +41,23 @@
 				<form [formGroup]="signupForm" (ngSubmit)="signupdata(signupForm.value)">
 					<div class="group">
 						<label for="name" class="label" style="color: black;">First Name</label>
-						<input id="text" type="text" class="input" data-type="text" formControlName="first_name">
-						<span style="color: red;" *ngIf="fName && fName.invalid && fName.touched ">This Field is
+						<input id="text" type="text" class="input" data-type="text" formControlName="fName">
+
+						<span style="color: red;" *ngIf="first_name && first_name.invalid && first_name.touched ">This Field is
+
 							required</span>
 					</div>
 
 					<div class="group">
 						<label for="name" class="label" style="color: black;">Last Name</label>
-						<input id="text" type="text" class="input" data-type="text" formControlName="lName">
-						<span style="color: red;" *ngIf="lName && lName.invalid && lName.touched ">This Field is
+						<input id="text" type="text" class="input" data-type="text" formControlName="last_name">
+						<span style="color: red;" *ngIf="last_name && last_name.invalid && last_name.touched ">This Field is
 							required</span>
 					</div>
 					<div class="group">
 						<label for="phone" class="label" style="color: black;">Phone</label>
-						<input id="phone" type="phone" class="input" data-type="phone" formControlName="number">
-						<span style="color: red;" *ngIf="number && number.invalid && number.touched ">This Field is
+						<input id="phone" type="phone" class="input" data-type="phone" formControlName="mobile">
+						<span style="color: red;" *ngIf="mobile && mobile.invalid && mobile.touched ">This Field is
 							required</span>
 					</div>
 					<div class="group">
@@ -72,8 +74,8 @@
 					</div>
 					<div class="group">
 						<label for="pass" class="label" style="color: black;">Repeat Password</label>
-						<input id="pass" type="password" class="input" data-type="password" formControlName="cpassword">
-						<span style="color: red;" *ngIf="cpassword && cpassword.invalid && cpassword.touched ">This Field is
+						<input id="pass" type="password" class="input" data-type="password" formControlName="confirm_password">
+						<span style="color: red;" *ngIf="confirm_password && confirm_password.invalid && confirm_password.touched ">This Field is
 							required</span>
 					</div>
 					<div class="group">
