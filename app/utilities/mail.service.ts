@@ -16,7 +16,8 @@ class MailService {
     });
   }
 
-  public async sendEmail(email: string, subject: string, text: any) {
+  public async sendEmail(recipient: any) {
+    const { email, subject, text } = recipient;
     try {
       await this.transporter.sendMail({
         from: process.env.MAIL_USER,
@@ -25,12 +26,11 @@ class MailService {
         text: text,
       });
       return {
-        succes: true,
         message: "Check Your Gmail Account",
       };
     } catch (error: any) {
       console.error("Error occurred while sending email:", error);
-      return error;
+      return { error: error };
     }
   }
 }

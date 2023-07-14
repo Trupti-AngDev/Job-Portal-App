@@ -4,6 +4,8 @@ import express from "express";
 import { celebrate } from "celebrate";
 import UserSchema from "../../Constants/Schema/User.schema";
 import passport from "passport";
+import UserController from "../../Controllers/User.controller";
+import axios from "axios";
 const router = express.Router();
 router.post(
   "/sign-in",
@@ -27,6 +29,11 @@ router.get(
   passport.authenticate("google", { failureRedirect: "/sign-in" }),
   userController.registerGoogleUser
 );
+
+/*reset-password routes*/
+router.post("/request-reset", UserController.initiateResetPassword);
+router.get("/request-reset", UserController.validateResetRequest);
+router.put("/update-password/:token", UserController.updatePassword);
 
 /*
  routes for testing purpose : -

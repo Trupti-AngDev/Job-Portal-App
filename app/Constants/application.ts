@@ -11,8 +11,9 @@ export default {
     `/user/sign-in`,
     `/user/google`,
     `/user/google/callback`,
+    `/user/request-reset`,
+    `/update-password/:token`,
     `/user/test-google-protected`,
     `/user/logout`,
-    `/user/test/email`,
   ],
 };

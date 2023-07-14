@@ -60,9 +60,66 @@ const registerGoogleUser: IController = async (req: any, res: any) => {
     };
     const googleUSer = await UserService.UserAccessManager(userData);
     if (googleUSer) {
-      ApiResponse.result(res, googleUSer, httpStatusCodes.ACCEPTED);
+      var responseHTML =
+        '<html><head><title>Main</title></head><body></body><script>res = %value%; window.opener.postMessage(res, "*");window.close();</script></html>';
+      responseHTML = responseHTML.replace(
+        "%value%",
+        JSON.stringify({
+          user: googleUSer,
+        })
+      );
+      res.status(200).send(responseHTML);
     } else {
       ApiResponse.error(res, httpStatusCodes.BAD_REQUEST);
+    }
+  } catch (e: any) {
+    console.log(e.message);
+    ApiResponse.error(res, httpStatusCodes.BAD_REQUEST, e.message);
+  }
+};
+
+const initiateResetPassword: IController = async (req, res) => {
+  try {
+    const result = await UserService.initiateResetPasswordService(req.body);
+    if (result instanceof Error) {
+      ApiResponse.error(res, httpStatusCodes.BAD_REQUEST, result.message);
+    } else {
+      result.error
+        ? ApiResponse.error(res, httpStatusCodes.BAD_REQUEST, result.error)
+        : ApiResponse.result(res, result, httpStatusCodes.OK);
+    }
+  } catch (e: any) {
+    console.log(e.message);
+    ApiResponse.error(res, httpStatusCodes.BAD_REQUEST, e.message);
+  }
+};
+const validateResetRequest: IController = async (req, res) => {
+  try {
+    const token = req.query.token;
+    const result = await UserService.validateResetRequestService(token);
+    if (result instanceof Error) {
+      ApiResponse.error(res, httpStatusCodes.BAD_REQUEST, result.message);
+    } else {
+      result.error
+        ? ApiResponse.error(res, httpStatusCodes.BAD_REQUEST, result.error)
+        : ApiResponse.result(res, result, httpStatusCodes.OK);
+    }
+  } catch (e: any) {
+    console.log(e.message);
+    ApiResponse.error(res, httpStatusCodes.BAD_REQUEST, e.message);
+  }
+};
+
+const updatePassword: IController = async (req, res) => {
+  try {
+    const { token } = req.params;
+    const result = await UserService.updatePasswordService(token, req.body);
+    if (result instanceof Error) {
+      ApiResponse.error(res, httpStatusCodes.BAD_REQUEST, result.message);
+    } else {
+      result.error
+        ? ApiResponse.error(res, httpStatusCodes.BAD_REQUEST, result.error)
+        : ApiResponse.result(res, result, httpStatusCodes.OK);
     }
   } catch (e: any) {
     console.log(e.message);
@@ -74,4 +131,7 @@ export default {
   login,
   register,
   registerGoogleUser,
+  initiateResetPassword,
+  validateResetRequest,
+  updatePassword,
 };
