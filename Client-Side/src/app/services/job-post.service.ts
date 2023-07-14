@@ -10,12 +10,12 @@ export class JobPostService {
   constructor(private http:HttpClient) { }
 
   getData(){
-    return this.http.get('http://localhost:3000/job-posts');
+    return this.http.get('http://localhost:5000/job-posts');
   }
   
   getPostData(data:any):Observable<any>{
   
-   return this.http.post(' http://localhost:3000/job-posts',data)
+   return this.http.post('http://localhost:5000/job-posts',data)
   }
 
 }

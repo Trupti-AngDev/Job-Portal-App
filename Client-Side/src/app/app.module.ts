@@ -22,6 +22,8 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { PortalSelectionComponent } from './portal-selection/portal-selection.component';
 
 import{MatButtonModule} from '@angular/material/button'
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 
@@ -29,7 +31,8 @@ import { ProfessionalLabourDomainComponent } from './Domain/professional-labour-
 import { SkilledLabourDomainComponent } from './Domain/skilled-labour-domain/skilled-labour-domain.component';
 
 import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.component';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DialogPosthistoryComponent } from './dialog-posthistory/dialog-posthistory.component'
 
 
 
@@ -49,6 +52,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     SkilledLabourDomainComponent,
     LaborCriteriaComponent,
     DashboardComponent,
+    DialogPosthistoryComponent,
 
   ],
   imports: [
@@ -63,6 +67,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     MatSelectModule,
     HttpClientModule,
     MatButtonModule,
+    MatDialogModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable

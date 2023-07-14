@@ -35,6 +35,7 @@ signupForm=new FormGroup({
   // console.log(this.signupForm.value)
   this.auth.signup(data).subscribe((response)=>{
     console.log(response)
+    this.signupForm.reset();
   })
   
       }
