@@ -17,7 +17,7 @@ import { DialogPosthistoryComponent } from './dialog-posthistory/dialog-posthist
 
 const routes: Routes = [
   {
-    path:'login',
+    path:'',
     component:UserAuthComponent
   },
   {
