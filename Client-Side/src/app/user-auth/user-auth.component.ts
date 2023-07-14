@@ -17,12 +17,12 @@ export class UserAuthComponent {
   })
 
 signupForm=new FormGroup({
-  fName :new FormControl('',[Validators.required,Validators.minLength(2),Validators.maxLength(10)]),
-        lName:new FormControl('',[Validators.required,Validators.minLength(2),Validators.maxLength(10)]),
-        number:new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
+  first_name :new FormControl('',[Validators.required,Validators.minLength(2),Validators.maxLength(10)]),
+  last_name:new FormControl('',[Validators.required,Validators.minLength(2),Validators.maxLength(10)]),
+       mobile:new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
        email:new FormControl('',[Validators.required,Validators.email]),
        password:new FormControl('',[ Validators.required,Validators.pattern(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&^_-]).{8,}/)]),
-       cpassword:new FormControl('',[Validators.required,Validators.pattern(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&^_-]).{8,}/)]),
+       confirm_password:new FormControl('',[Validators.required,Validators.pattern(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&^_-]).{8,}/)]),
        role:new FormControl('',[Validators.required])
 })
 
@@ -39,10 +39,10 @@ signupForm=new FormGroup({
   
       }
      
-    get fName(){
+    get first_name(){
       return this.signupForm.get('fName');
       }
-      get lName(){
+      get last_name(){
         return this.signupForm.get('lName');
         }
       get email(){
@@ -51,10 +51,10 @@ signupForm=new FormGroup({
         get password(){
           return this.signupForm.get('password');
           }
-          get cpassword(){
+          get confirm_password(){
             return this.signupForm.get('cpassword');
             }
-            get number(){
+            get mobile(){
               return this.signupForm.get('number');
               }
             get role(){
