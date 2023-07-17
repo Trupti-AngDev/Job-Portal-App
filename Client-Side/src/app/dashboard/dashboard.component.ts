@@ -3,7 +3,7 @@ import { JobPostService } from '../services/job-post.service';
 import { response } from 'express';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogPosthistoryComponent } from '../dialog-posthistory/dialog-posthistory.component';
+import { DialogPostComponent } from '../dialog-post/dialog-post.component';
 
 
 @Component({
@@ -18,7 +18,7 @@ import { DialogPosthistoryComponent } from '../dialog-posthistory/dialog-posthis
 export class DashboardComponent {
 jobPosts:any=[];
 specificData:any;
-constructor(private jobPost:JobPostService, private router:Router, public dialog: MatDialog){}
+constructor(private jobPost:JobPostService, private router:Router, private   dialog: MatDialog){}
 
 ngOnInit(){
  this.jobPost.getData().subscribe((response)=>{
@@ -29,25 +29,25 @@ ngOnInit(){
  })
 }
 
-details(id:any){
- // console.log(id);
-  
-    this.specificData = this.jobPosts.find((item:any) => item.id === id);
-   // console.log(specificData)
-    if (this.specificData) {
-      // Use the specificData properties
-      console.log(this.specificData.companyname);
-      console.log(this.specificData.position);
-      // ...
-    }
-  
-  const dialogRef = this.dialog.open(DialogPosthistoryComponent, {
-    width: '400px', 
-});
-dialogRef.afterClosed().subscribe((result) => {
-  console.log('Dialog result:', result);
-  // Handle the result or perform any necessary actions
-});
+details(id: any): void {
+  this.specificData = this.jobPosts.find((item: any) => item.id === id);
+
+  if (this.specificData) {
+    const dialogRef = this.dialog.open(DialogPostComponent, {
+      width: '400px',
+      data: {
+        companyName: this.specificData.companyname,
+        position: this.specificData.position,
+        jd:this.specificData.jd
+      }
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('Dialog result:', result);
+      // Handle the result or perform any necessary actions
+    });
+  }
+}
 
 }
-}
+

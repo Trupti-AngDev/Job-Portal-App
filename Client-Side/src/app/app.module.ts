@@ -32,8 +32,7 @@ import { SkilledLabourDomainComponent } from './Domain/skilled-labour-domain/ski
 
 import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DialogPosthistoryComponent } from './dialog-posthistory/dialog-posthistory.component'
-
+import { DialogPostComponent } from './dialog-post/dialog-post.component'
 
 
 @NgModule({
@@ -52,7 +51,7 @@ import { DialogPosthistoryComponent } from './dialog-posthistory/dialog-posthist
     SkilledLabourDomainComponent,
     LaborCriteriaComponent,
     DashboardComponent,
-    DialogPosthistoryComponent,
+    DialogPostComponent,
 
   ],
   imports: [

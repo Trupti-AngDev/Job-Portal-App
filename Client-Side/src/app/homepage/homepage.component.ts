@@ -19,5 +19,8 @@ export class HomepageComponent {
     this.router.navigate(['/'])
   }
 
+  viewPosts(){
+    this.router.navigate(['/dashboard'])
+  }
 }
 
