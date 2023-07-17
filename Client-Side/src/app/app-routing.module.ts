@@ -12,6 +12,7 @@ import { ProfessionalLabourDomainComponent } from './Domain/professional-labour-
 import { LaborCriteriaComponent } from './labor-criteria/labor-criteria.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DialogPosthistoryComponent } from './dialog-posthistory/dialog-posthistory.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 
@@ -72,6 +73,10 @@ const routes: Routes = [
   {
     path:'dialog',
     component:DialogPosthistoryComponent
+  },
+  {
+    path:'reset',
+    component:ResetPasswordComponent
   }
 ];
 
