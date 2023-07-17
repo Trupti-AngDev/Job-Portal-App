@@ -35,7 +35,9 @@ signupForm=new FormGroup({
   // console.log(this.signupForm.value)
   this.auth.signup(data).subscribe((response)=>{
     console.log(response)
+    
     this.signupForm.reset();
+    alert("Account Created")
   })
   
       }
@@ -70,6 +72,7 @@ if (this.loginForm.valid) {
   this.auth.login(data).subscribe({
     next: (response) => {
       console.log("Login Successful", data);
+      alert("Login Successfull")
       localStorage.setItem("Token", response.results.token);
       this.router.navigate(["/portalselection"]);
       this.loginForm.reset();

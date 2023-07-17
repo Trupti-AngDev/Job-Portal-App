@@ -17,6 +17,7 @@ export class HomepageComponent {
   logout(){
     localStorage.removeItem('Token');
     this.router.navigate(['/'])
+    alert("Logout Successfull")
   }
 
 }
