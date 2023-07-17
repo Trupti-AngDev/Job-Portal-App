@@ -4,10 +4,10 @@
       <div class="col">
         <button id="menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
           aria-controls="offcanvasExample" routerLink="/homepage">
-          <i class="bi bi-list" style="color: white; font-weight: bold;"></i> 
+          <i class="bi bi-list" style="color: white; font-weight: bold;"></i>
         </button>
 
-     
+
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
           aria-labelledby="offcanvasExampleLabel" style="width: fit-content;">
           <div class="offcanvas-body">
@@ -15,33 +15,35 @@
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
                 style="float: right;"></button>
               <ul>
+
                 <li><button class="btn btn-outline-primary" (click)="viewPosts()">View Your Posts</button></li>
+
+
                 <li><button class="btn btn-outline-primary">View Requests</button></li>
                 <li><button class="btn btn-outline-primary">Buy Plans</button></li>
-                <li><button class="btn btn-outline-primary">My account</button></li>
+                <li><button class="btn btn-outline-primary" routerLink="/profile">My account</button></li>
                 <li><button class="btn btn-outline-primary" routerLink="/setting">Settings</button></li>
-  
+
               </ul>
             </div>
           </div>
         </div>
-        <button class="btn btn-outline-success" id="logout" (click)="logout()">Logout</button>  
-    </div>
-    
-
-   <div class="row">
-    <div class="col-md-12">
-    <div class="content">
-      <h2 class="text">
-        Not Posted Yet!<br>
-        <br>
-        Tap on add posts button to post new opening.
-      </h2>
-      <br>
-      <button class="btn btn-lg btn-primary" (click)="moveToJobPost()">ADD POSTS</button>
+        <button class="btn btn-outline-success" id="logout" (click)="logout()">Logout</button>
       </div>
-    </div>
-    </div>
 
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content">
+            <h2 class="text">
+              Not Posted Yet!<br>
+              <br>
+              Tap on add posts button to post new opening.
+            </h2>
+            <br>
+            <button class="btn btn-lg btn-primary" (click)="moveToJobPost()">ADD POSTS</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
