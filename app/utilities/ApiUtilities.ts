@@ -23,6 +23,7 @@ const extractCookieFromRequest = (req: Request, key: string) => {
       return filtered[0].split('=')[1];
     }
   }*/
+
   if (req.headers[key]) {
     return req.headers[key];
   }

@@ -46,4 +46,33 @@ export class UserModel extends baseModel {
       [id]
     );
   }
+
+  async modifySingleField(userId: any, fieldToUpdate: any, updatedField: any) {
+    return await this._executeQuery(
+      `UPDATE user
+    SET ${fieldToUpdate} = ?
+    WHERE id = ?`,
+      [updatedField, userId]
+    );
+  }
+  async modifyToken(resetToken: any, resetTokenExpire: any, userId: any) {
+    return await this._executeQuery(
+      `UPDATE user SET token = ?, expire_time = ? WHERE id = ?`,
+      [resetToken, resetTokenExpire, userId]
+    );
+  }
+
+  async tokenDropOut(userId: any) {
+    return await this._executeQuery(
+      `UPDATE user SET token = NULL, expire_time = NULL WHERE id = ?`,
+      [userId]
+    );
+  }
+
+  async getUserBytoken(token: any) {
+    return await this._executeQuery(
+      "SELECT id,email, password, token , expire_time  FROM user WHERE token = ?  ",
+      [token]
+    );
+  }
 }
